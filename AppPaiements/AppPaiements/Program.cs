@@ -16,6 +16,18 @@ internal class Program
         {
             CarteCredit.AfficherDetails();
         }
+        Console.WriteLine();
 
+        //les instances de la classe Paypal
+        Paypal paypal1 = new Paypal("elyvall@yahoo.com", 100000, "Rich");
+        Paypal paypal2 = new Paypal("habib@yahoo.com", 1000, "Poor");
+
+        //Afficher les details de ces objets
+        List<Paypal> paypals = new List<Paypal> { paypal1, paypal2 };
+        Console.WriteLine("les paypals sont :");
+        foreach (var Paypal in paypals)
+        {
+            Paypal.AfficheDetails();
+        }
     }
 }
